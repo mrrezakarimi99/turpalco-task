@@ -21,7 +21,7 @@ class SearchController extends Controller
      */
     public function search(SearchFilterProductRequest $request)
     {
-        $products = $this->productRepository->search($request->validated());
+        $products = $this->productRepository->search();
         return new ProductCollection($products);
     }
 }

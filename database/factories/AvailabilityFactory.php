@@ -18,10 +18,9 @@ class AvailabilityFactory extends Factory
     public function definition()
     {
         return [
-            'product_id' => Product::factory(),
-            'price' => $this->faker->randomFloat(),
+            'price'      => $this->faker->randomFloat(),
             'start_time' => now()->toDateTimeString(),
-            'end_time' => now()->addWeek()->toDateTimeString(),
+            'end_time'   => now()->addWeek()->toDateTimeString(),
         ];
     }
 }

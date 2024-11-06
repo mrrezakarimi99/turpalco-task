@@ -13,7 +13,7 @@ class ProductRepository
     {
     }
 
-    public function search(array $filters): Collection
+    public function search(): Collection
     {
         return $this->product
             ->with('availabilities')

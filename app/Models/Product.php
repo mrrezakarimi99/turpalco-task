@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
-use App\Scopes\ProductFilterEndDate;
-use App\Scopes\ProductFilterStartDate;
+use App\Scopes\ProductFilterAvailable;
+use App\Scopes\ProductFilterEndTime;
+use App\Scopes\ProductFilterStartTime;
 use App\Traits\Filterable;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Pipeline\Pipeline;
 
 class Product extends Model
 {
@@ -39,8 +39,9 @@ class Product extends Model
     protected function getFilters(): array
     {
         return [
-            ProductFilterStartDate::class,
-            ProductFilterEndDate::class,
+            ProductFilterStartTime::class,
+            ProductFilterEndTime::class,
+            ProductFilterAvailable::class,
         ];
     }
 }
