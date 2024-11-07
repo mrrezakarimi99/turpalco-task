@@ -15,7 +15,7 @@ class Product extends Model
 {
     use HasFactory, Filterable;
 
-    protected $fillable = ['name', 'description', 'thumbnail'];
+    protected $fillable = ['slug','name', 'description', 'thumbnail'];
 
     protected $appends = ['minimumPrice'];
 

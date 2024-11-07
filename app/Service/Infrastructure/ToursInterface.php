@@ -2,7 +2,7 @@
 
 namespace App\Service\Infrastructure;
 
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
@@ -18,7 +18,7 @@ abstract class ToursInterface
 
     abstract public function searchTours($data): Collection;
 
-    abstract public function availableTour($data): Collection;
+    abstract public function availableTour($data): bool;
 
     public function getAbsoluteUrl($path): string
     {

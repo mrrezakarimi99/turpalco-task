@@ -18,7 +18,7 @@ class AvailabilityFactory extends Factory
     public function definition()
     {
         return [
-            'price'      => $this->faker->randomFloat(),
+            'price'      => $this->faker->randomFloat(2, 10, 100),
             'start_time' => now()->toDateTimeString(),
             'end_time'   => now()->addWeek()->toDateTimeString(),
         ];
